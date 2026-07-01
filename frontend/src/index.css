@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-creme: #F4EFE6;
+  --color-creme-light: #FDFBF7;
+  --color-heritage-red: #8A251C;
+  --color-heritage-red-hover: #6b1c15;
+  --color-wood-dark: #4A3018;
+  --color-wood-light: #8C6239;
+}
+
+/* Optional: Set the default background and text color for the whole app */
+body {
+  background-color: var(--color-creme);
+  color: var(--color-wood-dark);
+  scroll-behavior: smooth;
+}
