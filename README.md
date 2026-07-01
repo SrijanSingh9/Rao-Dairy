@@ -22,7 +22,7 @@ Rao Dairy Management System bridges the gap between digital efficiency and local
 
 
 
-* **For Customers:**
+**For Customers:**
 
 * Dynamic Product Catalog (fetched in real-time).
 
@@ -34,7 +34,7 @@ Rao Dairy Management System bridges the gap between digital efficiency and local
 
 
 
-* **For Business Owners (Owner Dashboard):**
+**For Business Owners (Owner Dashboard):**
 
 * **Delivery Route:** A dedicated panel to see pending orders, complete with Google Maps integration and delivery checklists.
 
