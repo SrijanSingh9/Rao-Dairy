@@ -1,3 +1,5 @@
+import dj_database_url
+import os
 """
 Django settings for core project.
 
@@ -81,14 +83,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'raodairy',      # The name of your database
-        'USER': 'postgres',      # Your Postgres username
-        'PASSWORD':'strongpassword',  # Replace with your actual Postgres password
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        conn_max_age=600,
+        ssl_require=True # Required for Render PostgreSQL
+    )
 }
 
 
