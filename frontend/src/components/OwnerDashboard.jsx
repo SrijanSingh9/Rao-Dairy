@@ -10,8 +10,8 @@ export default function OwnerDashboard() {
     setIsLoading(true);
     // Fetch all if history, ledger, or route is selected (simplified)
     const url = (activeTab === 'history' || activeTab === 'ledger') 
-      ? 'http://127.0.0.1:8000/api/orders/?all=true' 
-      : 'http://127.0.0.1:8000/api/orders/';
+      ? 'https://rao-dairy-gzcw.onrender.com/api/orders/?all=true' 
+      : 'https://rao-dairy-gzcw.onrender.com/api/orders/';
 
     fetch(url)
       .then(res => res.json())
@@ -33,7 +33,7 @@ export default function OwnerDashboard() {
 
   const markAsCompleted = async (orderId) => {
     try {
-      await fetch(`http://127.0.0.1:8000/api/orders/${orderId}/`, {
+      await fetch(`https://rao-dairy-gzcw.onrender.com/api/orders/${orderId}/`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'Completed' })

@@ -8,7 +8,7 @@ export default function ProductGrid({ addToCart }) {
 
   // 2. Fetch data when the component mounts
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/products/')
+    fetch('https://rao-dairy-gzcw.onrender.com/api/products/')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to connect to the dairy backend.');

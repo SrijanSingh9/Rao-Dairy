@@ -14,7 +14,7 @@ export default function InventoryManager() {
   const [newProduct, setNewProduct] = useState(initialNewProduct);
 
   const fetchProducts = () => {
-    fetch('http://127.0.0.1:8000/api/products/?all=true')
+    fetch('https://rao-dairy-gzcw.onrender.com/api/products/?all=true')
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -31,7 +31,7 @@ export default function InventoryManager() {
   const handleAddProduct = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/products/', {
+      const res = await fetch('https://rao-dairy-gzcw.onrender.com/api/products/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newProduct)
@@ -51,7 +51,7 @@ export default function InventoryManager() {
   // UPDATE an existing product
   const updateProduct = async (id, updates) => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/products/${id}/`, {
+      const res = await fetch(`https://rao-dairy-gzcw.onrender.com/api/products/${id}/`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updates)
