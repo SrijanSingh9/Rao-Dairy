@@ -27,7 +27,12 @@ SECRET_KEY = 'django-insecure-x%zdvoj0176r(02+sj%ur0=#74d%ldzao+527z^jw^(r385@f7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://rao-dairy-gzcw.onrender.com"]
+ALLOWED_HOSTS = [
+    'rao-dairy-gzcw.onrender.com',  # Your Backend Render URL
+    'rao-dairy-ex88.vercel.app',    # Your Frontend Vercel URL
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
