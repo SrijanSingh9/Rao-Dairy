@@ -27,7 +27,7 @@ export default function OwnerDashboard() {
 
   useEffect(() => {
     fetchOrders();
-    const interval = setInterval(fetchOrders, 30000);
+    const interval = setInterval(fetchOrders, 180000);
     return () => clearInterval(interval);
   }, [activeTab]);
 
