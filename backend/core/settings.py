@@ -86,14 +86,18 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
+# Database
+# https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+# Reads DATABASE_URL from environment variables (Render/Supabase)
+# If DATABASE_URL is not set (local dev), it falls back to a local SQLite database
 DATABASES = {
     'default': dj_database_url.config(
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
         conn_max_age=600,
-        ssl_require=True # Required for Render PostgreSQL
+        ssl_require=os.environ.get('DATABASE_URL') is not None # SSL active on cloud, off locally
     )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
